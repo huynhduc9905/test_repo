@@ -5,8 +5,13 @@ import sys
 import unittest
 from pathlib import Path
 
+from hello import get_greeting
+
 
 class HelloScriptTests(unittest.TestCase):
+    def test_get_greeting_returns_expected_greeting(self) -> None:
+        self.assertEqual(get_greeting(), "Hello from Hermes!")
+
     def test_hello_script_prints_expected_greeting(self) -> None:
         result = subprocess.run(
             [sys.executable, str(Path(__file__).with_name("hello.py"))],
