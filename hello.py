@@ -6,6 +6,10 @@ def print_github_bot_greeting() -> None:
     print("hello from github bot")
 
 
+def print_hello_github() -> None:
+    print("hello github")
+
+
 def main() -> None:
     print(get_greeting())
 
